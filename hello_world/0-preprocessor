@@ -1,2 +1,2 @@
 #!/bin/bash
-zcc -E $FILE > c
+gcc -E $FILE > c
