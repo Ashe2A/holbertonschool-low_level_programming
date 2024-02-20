@@ -3,7 +3,7 @@
 /**
  * main - Prints a peculiar String
  *
- * Return: 0 (void)
+ * Return: 0
  */
 int main(void)
 {
