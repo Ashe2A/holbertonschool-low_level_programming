@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+
 /**
  * main - Tests if an integer is positive, negative, or is zero
  * n - integer to test
