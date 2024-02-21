@@ -12,5 +12,6 @@ char abcd;
 for (abcd = 'a' ; abcd <= 'z' ; abcd++) {
 putchar(abcd);
 }
+putchar('\n');
 return (0);
 }
