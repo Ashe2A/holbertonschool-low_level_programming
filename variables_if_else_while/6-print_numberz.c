@@ -11,8 +11,8 @@ int main(void)
 int zn;
 for (zn = 0 ; zn <= 9 ; zn++)
 {
-  putchar(%d, zn);
+putchar(zn);
 }
-putchar("\n");
-return (0);
+putchar(ascii(10));
+return(0);
 }
