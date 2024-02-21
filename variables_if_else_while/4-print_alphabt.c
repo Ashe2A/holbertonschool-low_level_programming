@@ -18,6 +18,7 @@ else
 {
 putchar(abcdf);
 }
+}
 putchar('\n');
 return (0);
 }
