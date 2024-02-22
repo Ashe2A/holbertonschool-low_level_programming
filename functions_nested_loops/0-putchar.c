@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Prints underscore putchar
@@ -7,6 +7,11 @@
  */
 int main(void)
 {
-printf("_putchar");
-return (0);
+char[] upc = "_putchar\n";
+for (i = 0 ; i < strlen(upc) ; i++)
+{
+_putchar(upc[i]);
+}
+putchar('\n');
+Return (0);
 }
