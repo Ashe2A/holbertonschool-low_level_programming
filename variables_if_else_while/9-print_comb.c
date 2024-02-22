@@ -14,8 +14,11 @@ for (zn = 0 ; zn <= 9 ; zn++)
 putchar(zn+48);
 if(zn == 9)
 {
-putchar(32);
+}
+else
+{
 putchar(44);
+putchar(32);
 }
 }
 putchar(10);
