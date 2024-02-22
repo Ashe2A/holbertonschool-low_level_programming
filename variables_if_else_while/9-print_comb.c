@@ -11,8 +11,8 @@ int main(void)
 char zn;
 for (zn = 0 ; zn <= 9 ; zn++)
 {
-putchar(zn+48);
-if(zn == 9)
+putchar(zn + 48);
+if (zn == 9)
 {
 }
 else
