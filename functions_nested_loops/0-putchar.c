@@ -2,6 +2,7 @@
 
 /**
  * main - Prints underscore putchar
+ * @i: each character of _putchar
  *
  * Return: 0
  */
