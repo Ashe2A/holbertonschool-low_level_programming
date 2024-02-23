@@ -2,7 +2,6 @@
 
 /**
  * print_alphabet - Prints lowercase alphabet
- * @i: each letter of the alphabet
  *
  * Return: 0
  */
