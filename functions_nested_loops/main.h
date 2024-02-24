@@ -1,5 +1,5 @@
-#ifndef _PUTCHAR
-#define _PUTCHAR
+#ifndef PUTCHAR
+#define PUTCHAR
 
 int _putchar(char c);
 
@@ -13,23 +13,30 @@ int print_alphabet_x10(void);
 
 #endif
 
-#ifndef _ISLOWER
-#define _ISLOWER
+#ifndef LOWERCASE
+#define LOWERCASE
 
 int _islower(int c);
 
 #endif
 
-#ifndef _ISALPHA
-#define _ISALPHA
+#ifndef LETTER
+#define LETTER
 
 int _isalpha(int c);
 
 #endif
 
-#ifndef PRINT_SIGN
-#define PRINT_SIGN
+#ifndef SIGN
+#define SIGN
 
 int print_sign(int n);
+
+#endif
+
+#ifndef ABS
+#define ABS
+
+int _abs(int n);
 
 #endif
