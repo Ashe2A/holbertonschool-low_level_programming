@@ -26,3 +26,10 @@ int _islower(int c);
 int _isalpha(int c);
 
 #endif
+
+#ifndef PRINT_SIGN
+#define PRINT_SIGN
+
+int print_sign(int n);
+
+#endif
