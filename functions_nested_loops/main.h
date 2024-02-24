@@ -9,12 +9,13 @@ int _putchar(char c);
 #define ALPHABET
 
 int print_alphabet(void);
+int print_alphabet_x10(void);
 
 #endif
 
-#ifndef ALPHABETX10
-#define ALPHABETX10
+#ifndef _ISLOWER
+#define _ISLOWER
 
-int print_alphabet_x10(void);
+int _islower(int c);
 
 #endif
