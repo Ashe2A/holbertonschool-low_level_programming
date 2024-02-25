@@ -54,3 +54,10 @@ int print_last_digit(int n);
 void jack_bauer(void);
 
 #endif
+
+#ifndef MULT
+#define MULT
+
+void times_table(void);
+
+#endif
