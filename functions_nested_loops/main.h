@@ -68,3 +68,10 @@ void times_table(void);
 int add(int a, int b);
 
 #endif
+
+#ifndef FINAL_KAMENRIDE
+#define FINAL_KAMENRIDE
+
+int print_to_98(int n);
+
+#endif
