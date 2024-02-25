@@ -26,7 +26,7 @@ printf(", ");
 }
 else if (n == 98)
 {
-printf(98);
+printf("98\n");
 }
 else
 {
