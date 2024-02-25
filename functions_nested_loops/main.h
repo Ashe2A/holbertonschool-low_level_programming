@@ -61,3 +61,10 @@ void jack_bauer(void);
 void times_table(void);
 
 #endif
+
+#ifndef ADD
+#define ADD
+
+int add(int a, int b);
+
+#endif
