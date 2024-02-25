@@ -1,4 +1,5 @@
-#include "main.h"
+#i
+nclude "main.h"
 
 /**
  * print_last_digit - Last digit
@@ -9,6 +10,5 @@
 
 int print_last_digit(int n)
 {
-int ld = n % 10;
-return (ld);
+return (_abs(n) % 10);
 }
