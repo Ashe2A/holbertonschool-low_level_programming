@@ -13,7 +13,7 @@ if (n > 98)
 {
 for (i = n ; i >= 98 ; i--)
 {
-printf("%d", i);
+printf("%d", n);
 if (i == 98)
 {
 _putchar('\n');
@@ -28,7 +28,7 @@ else
 {
 for (i = n ; i <= 98 ; i++)
 {
-printf("%d", i);
+printf("%d", n);
 if (i == 98)
 {
 _putchar('\n');
