@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_sign - Signs a number
+ * _abs - Absolute value
  * @n: The number
  *
  * Return: n if pos, -n if neg
  */
 
-int print_sign(int n)
+int _abs(int n)
 {
 if (n < 0)
 {
