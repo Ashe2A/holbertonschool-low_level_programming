@@ -40,3 +40,10 @@ int print_sign(int n);
 int _abs(int n);
 
 #endif
+
+#ifndef LD
+#define LD
+
+int print_last_digit(int n);
+
+#endif
