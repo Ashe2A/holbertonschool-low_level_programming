@@ -24,6 +24,10 @@ printf(", ");
 }
 }
 }
+else if (n == 98)
+{
+printf(98);
+}
 else
 {
 for (i = n ; i <= 98 ; i++)
