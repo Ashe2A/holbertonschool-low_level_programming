@@ -3,10 +3,9 @@
 /**
  * jack_bauer - print all minutes of the day
  *
- * Return: last digit of n
  */
 
-int jack_bauer(void)
+void jack_bauer(void)
 {
   int i, j;
 
@@ -28,5 +27,4 @@ _putchar(j + '0');
 _putchar('\n');
 }
 }
-return (0);
 }
