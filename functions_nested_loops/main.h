@@ -72,6 +72,6 @@ int add(int a, int b);
 #ifndef FINAL_KAMENRIDE
 #define FINAL_KAMENRIDE
 
-int print_to_98(int n);
+void print_to_98(int n);
 
 #endif
