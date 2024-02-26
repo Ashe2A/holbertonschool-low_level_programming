@@ -20,7 +20,7 @@ _putchar(i);
 }
 _putchar(j);
 }
-_putchar('\n');
 }
+_putchar('\n');
 }
 }
