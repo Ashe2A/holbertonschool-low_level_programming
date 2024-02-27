@@ -3,9 +3,11 @@
 
 /**
  * main - fizzbuzz test
+ *
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -15,12 +17,12 @@ void main(void)
 		{
 			printf("%d", i);
 		}
-		
+
 		if ((i % 3) == 0)
 		{
 			printf("Fizz");
 		}
-		
+
 		if ((i % 5) == 0)
 		{
 			printf("Buzz");
@@ -28,4 +30,5 @@ void main(void)
 		printf(" ");
 	}
 	printf("\n");
+	return (0);
 }
