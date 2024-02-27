@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * fizzbuzz - fizzbuzz test
+ * main - fizzbuzz test
  */
 
-void fizzbuzz(void)
+void main(void)
 {
 	int i;
 
