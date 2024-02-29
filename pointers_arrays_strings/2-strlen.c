@@ -10,21 +10,14 @@
 int _strlen(char *s)
 {
 	int i;
-	int len = 1;
+	int len = 0;
 
-	if (*s >= 0 && *s <= 255)
+	for (i = 0 ; i <= len ; i++)
 	{
-		for (i = 0 ; i < len ; i++)
+		if (*s >= 0 && *s <= 255)
 		{
-			if (*s >= 0 && *s <= 255)
-			{
-				len++;
-			}
+			len++;
 		}
-	}
-	else
-	{
-		len = 0;
 	}
 	return (len);
 }
