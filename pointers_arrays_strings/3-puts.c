@@ -5,11 +5,9 @@
 /**
  * _puts - puts a string
  * @str: the string
- *
- * Return: 0
  */
 
-int _puts(char *str)
+void _puts(char *str)
 {
 	int i;
 
@@ -18,5 +16,4 @@ int _puts(char *str)
 		_putchar(str[i]);
 	}
 	_putchar('\n');
-	return (0);
 }
