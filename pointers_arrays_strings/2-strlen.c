@@ -12,11 +12,11 @@ int _strlen(char *s)
 	int i;
 	int len = 1;
 
-	if ((*s)[0] >= 0 && (*s)[0] <= 255)
+	if (*s >= 0 && *s <= 255)
 	{
 		for (i = 0 ; i < len ; i++)
 		{
-			if ((*s)[i] >= 0 && (*s)[i] <= 255)
+			if (*s >= 0 && *s <= 255)
 			{
 				len++;
 			}
