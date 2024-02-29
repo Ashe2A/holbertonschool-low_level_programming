@@ -8,16 +8,12 @@
  */
 
 int _strlen(char *s)
-{
-	int i;
+{	
 	int len = 0;
 
-	for (i = 0 ; i <= len ; i++)
+	for (i = 0 ; i <= s[len] ; i++)
 	{
-		if (*s >= 0 && *s <= 255)
-		{
-			len++;
-		}
+		len++;
 	}
 	return (len);
 }
