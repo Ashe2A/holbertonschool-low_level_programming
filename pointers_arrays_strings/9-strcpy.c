@@ -18,8 +18,7 @@ char *_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 	}
 
-	char *ret;
-	ret = &dest;
+	char *ret = &dest;
 
 	return (ret);
 }
