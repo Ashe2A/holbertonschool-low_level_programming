@@ -9,7 +9,8 @@
 void rev_string(char *s)
 {
 	int i;
-	char new = *s;
+	char *new = s;
+	new = malloc((_strlen(s) + 1) * sizeof(char))
 
 	for (i = 0 ; i < _strlen(s) ; i++)
 	{
