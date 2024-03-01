@@ -1,5 +1,6 @@
 #include "main.h"
 #include "2-strlen.c"
+#include <stdlib.h>
 
 /**
  * rev_string - reverse a string
