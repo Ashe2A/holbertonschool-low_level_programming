@@ -12,13 +12,13 @@
 char *_strcpy(char *dest, char *src)
 {
 	int i;
+	char *ret;
 
 	for (i = 0 ; i <= _strlen(src) ; i++)
 	{
 		*(dest + i) = *(src + i);
 	}
 
-	char *ret = &dest;
-
+	ret = &dest;
 	return (ret);
 }
