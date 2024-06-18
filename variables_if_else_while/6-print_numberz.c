@@ -15,7 +15,7 @@ int main(void)
 	for (i = 0 ; i <= 9 ; i++)
 	{
 		putchar(i + 48);
-		/* 48 is the DECIMAL ascii code for character 0 */
+		/* 48 is the DECIMAL ascii code for character 0 (comments annoying) */
 	}
 
 	putchar('\n');
