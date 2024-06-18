@@ -12,9 +12,10 @@ int main(void)
 {
 	int i;
 
-	for (i = 30 ; i <= 39 ; i++)
+	for (i = 0 ; i <= 9 ; i++)
 	{
-		putchar(i);
+		putchar(i + 48);
+		// 48 is the DECIMAL ascii code for character 0
 	}
 
 	putchar('\n');
