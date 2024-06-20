@@ -1,6 +1,6 @@
 #ifndef FUNCTIONS
 #define FUNCTIONS
 
-void _putchar(void);
+int _putchar(void);
 
 #endif

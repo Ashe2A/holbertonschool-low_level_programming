@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 /**
- * main - print putchar
+ * _putchar - print putchar
  *
  * Return: Always 0 (Success)
  */
 
-void _putchar(void)
+int _putchar(void)
 {
 	printf("_putchar\n");
+	return(0);
 }
