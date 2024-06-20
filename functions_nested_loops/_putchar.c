@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-void stringprint()
+void _putchar()
 {
 	printf("_putchar\n");
 }

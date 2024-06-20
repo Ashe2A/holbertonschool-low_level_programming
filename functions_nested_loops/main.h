@@ -1,6 +1,6 @@
 #ifndef FUNCTIONS
 #define FUNCTIONS
 
-void stringprint();
+void _putchar();
 
 #endif

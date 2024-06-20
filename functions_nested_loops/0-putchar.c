@@ -10,6 +10,6 @@
 
 int main(void)
 {
-	stringprint();
+	_putchar();
 	return (0);
 }
