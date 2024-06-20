@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - print putchar
@@ -9,6 +10,6 @@
 
 int main(void)
 {
-	_putchar();
+	stringprint("_putchar\n");
 	return (0);
 }
