@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include "1-alphabet.c"
 
 /**
  * print_alphabet_x10 - print alphabet times ten
@@ -14,6 +15,5 @@ void print_alphabet_x10(void)
 	for (i = 0 ; i < 10 ; i++)
 	{
 		print_alphabet();
-		_putchar('\n');
 	}
 }
