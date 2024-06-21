@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
 
 /**
  * main - print putchar
@@ -14,7 +13,7 @@ int main(void)
 	int i;
 	char put[] = "_putchar\n";
 
-	for (i = 0 ; i < (int) strlen(put) ; i++)
+	for (i = 0 ; put[i] == '\0' ; i++)
 	{
 		_putchar(put[i]);
 	}
