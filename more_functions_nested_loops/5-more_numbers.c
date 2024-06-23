@@ -11,17 +11,10 @@ void more_numbers(void)
 	{
 		for (j = '0' ; j <= '9' ; j++)
 		{
-			if (i < '1')
-			{
-				_putchar(j);
-			}
-			else if (i >= '1' && j <= '4')
+			if (!(i >= '1' && j > '4'))
 			{
 				_putchar(i);
 				_putchar(j);
-			}
-			else
-			{
 			}
 		}
 	}
