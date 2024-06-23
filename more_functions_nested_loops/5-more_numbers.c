@@ -15,7 +15,10 @@ void more_numbers(void)
 			{
 				if (!(i >= '1' && j > '4'))
 				{
-					_putchar(i);
+					if (i > 0)
+					{
+						_putchar(i);
+					}		
 					_putchar(j);
 				}
 			}
