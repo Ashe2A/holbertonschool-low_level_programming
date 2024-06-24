@@ -4,8 +4,10 @@
 
 /**
  * main - fizz buzz
+ *
+ * Return: Always 0 (Success)
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -24,10 +26,13 @@ void main(void)
 
 			if (i % 5 == 0)
 			{
-				pritnf("Buzz");
+				printf("Buzz");
 			}
 		}
+		printf(" ");
 	}
-	
-	_putchar('\n');
+
+	printf("\n");
+
+	return (0);
 }
