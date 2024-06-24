@@ -29,10 +29,16 @@ int main(void)
 				printf("Buzz");
 			}
 		}
-		printf(" ");
-	}
 
-	printf("\n");
+		if (i < 100)
+		{
+			printf(" ");
+		}
+		else
+		{
+			printf("\n");
+		}
+	}
 
 	return (0);
 }
