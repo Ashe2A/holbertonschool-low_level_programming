@@ -25,6 +25,10 @@ int _atoi(char *s)
 		{
 			sign *= -1;
 		}
+		else if (s[i] == '+' && intfound == 0)
+		{
+			sign *= 1;
+		}
 		else
 		{
 			break;
