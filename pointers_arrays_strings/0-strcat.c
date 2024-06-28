@@ -12,18 +12,13 @@
 char *_strcat(char *dest, char *src)
 {
 	int i;
-	size_t s = _strlen(dest) + _strlen(src) + 1;
-	char *cat = (char *) malloc(s * sizeof(char));
 
-	for (i = 0 ; i < _strlen(dest) ; i++)
+	for (i = 0 ; i < _strlen(src) ; i++)
 	{
-		cat[i] = dest[i];
+		dest[i + _strlen(dest)] = src[i];
 	}
 
-	for (i = 0 ; i <= _strlen(src) ; i++)
-	{
-		cat[i + _strlen(dest)] = src[i];
-	}
+	dest[i] = '\0';
 
-	return (cat);
+	return (dest);
 }
