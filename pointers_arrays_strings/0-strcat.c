@@ -12,7 +12,8 @@
 char *_strcat(char *dest, char *src)
 {
 	int i;
-	char *cat = (char *)malloc((_strlen(dest) + _strlen(src) + 1) * sizeof(char));
+	size_t s = _strlen(dest) + _strlen(src) + 1;
+	char *cat = (char *) malloc(s * sizeof(char));
 
 	for (i = 0 ; i < _strlen(dest) ; i++)
 	{
