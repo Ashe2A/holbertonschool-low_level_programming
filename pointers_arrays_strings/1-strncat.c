@@ -8,9 +8,9 @@
  * @src: source
  * @n: number of chars from src
  *
- * Return: concatened src with dest
+ * Return: concatened limited src with dest
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	char *cat = dest;
