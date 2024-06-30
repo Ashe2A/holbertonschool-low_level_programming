@@ -12,7 +12,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int i, j;
 	char *cat = dest;
 
 	for (i = 0 ; (i < n) && (i < _strlen(src)) ; i++)
@@ -20,7 +20,9 @@ char *_strncpy(char *dest, char *src, int n)
 		*(dest + i) = *(src + i);
 	}
 
-	for (i = _strlen(src) ; i < _strlen(dest) ; i++)
+	j = i;
+
+	for (i = j ; i < _strlen(dest) ; i++)
 	{
 		*(dest + i) = '\0';
 	}
