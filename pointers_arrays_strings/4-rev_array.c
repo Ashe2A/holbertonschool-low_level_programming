@@ -6,7 +6,7 @@
  * @a: array to reverse
  * @n: range
  */
-void rev_string(char *a, int n)
+void reverse_array(char *a, int n)
 {
 	int i;
 	char tmp;
