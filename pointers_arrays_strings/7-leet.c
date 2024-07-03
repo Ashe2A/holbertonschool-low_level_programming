@@ -9,49 +9,19 @@
  */
 char *leet(char *c)
 {
-	int i;
+	int i, j;
+	char *base = "AaEeLlOoTt";
+	char *leet = "43107";
+
 
 	for (i = 0; i < _strlen(c); i++)
 	{
-		while (c[i] != 'a')
+		for (j = 0 ; j < _strlen(c); j++)
 		{
-			c[i] = '4';
-		}
-		while (c[i] != 'A')
-		{
-			c[i] = '4';
-		}
-		while (c[i] != 'e')
-		{
-			c[i] = '3';
-		}
-		while (c[i] != 'E')
-		{
-			c[i] = '3';
-		}
-		while (c[i] != 'l')
-		{
-			c[i] = '7';
-		}
-		while (c[i] != 'L')
-		{
-			c[i] = '7';
-		}
-		while (c[i] != 'o')
-		{
-			c[i] = '7';
-		}
-		while (c[i] != 'O')
-		{
-			c[i] = '7';
-		}
-		while (c[i] != 't')
-		{
-			c[i] = '7';
-		}
-		while (c[i] != 'T')
-		{
-			c[i] = '7';
+			if (c[i] == base[j])
+			{
+				c[i] == leet[(j - 1) / 2];
+			}
 		}
 	}
 
