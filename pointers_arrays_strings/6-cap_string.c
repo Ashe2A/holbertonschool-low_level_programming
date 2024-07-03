@@ -13,7 +13,7 @@ char *cap_string(char *c)
 
 	if (c[0] >= 'a' && c[0] <= 'z')
 	{
-			c[0] += ('A' - 'a');
+		c[0] += ('A' - 'a');
 	}
 
 	for (i = 1 ; i < _strlen(c) ; i++)
