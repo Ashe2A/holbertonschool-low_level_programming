@@ -11,13 +11,13 @@ char *string_toupper(char *c)
 {
 	int i;
 
-    for (i = 0 ; i < _strlen(c) ; i++)
+	for (i = 0 ; i < _strlen(c) ; i++)
 	{
-        if (c[i] >= 'a' && c[i] <= 'z')
-        {
-            c[i] += ('A' - 'a');
-        }
-    }
+		if (c[i] >= 'a' && c[i] <= 'z')
+		{
+			c[i] += ('A' - 'a');
+		}
+	}
 
-    return (c);
+	return (c);
 }
