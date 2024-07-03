@@ -2,18 +2,25 @@
 #include "2-strlen.c"
 
 /**
- * string_toupper - upper all lower
- * @c: string to upper
+ * cap_string - capitalize words
+ * @c: string to process
  *
- * Return: uppered string
+ * Return: capitalized words string
  */
-char *string_toupper(char *c)
+char *cap_string(char *c)
 {
 	int i;
 
-	for (i = 0 ; i < _strlen(c) ; i++)
+	if (c[0] >= 'a' && c[0] <= 'z')
 	{
-		if (c[i] >= 'a' && c[i] <= 'z')
+			c[0] += ('A' - 'a');
+	}
+
+	for (i = 1 ; i < _strlen(c) ; i++)
+	{
+		if (c[i] >= 'a' && c[i] <= 'z'
+		&& (c[i - 1] == (' ' || '\t' || '\n' || ',' || ';' || '.'
+		|| '!' || '?' || '\"' || '(' || ')' || '{' || '}')))
 		{
 			c[i] += ('A' - 'a');
 		}
