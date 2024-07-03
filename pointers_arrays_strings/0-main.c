@@ -39,13 +39,13 @@ int main(void)
 	char buffer[98] = {0x00};
 
 	simple_print_buffer(buffer, 98);
-	_memset(buffer, 0x01, 95);
 
 	printf("-------------------------------------------------\n");
-	simple_print_buffer(buffer, 98);
-	_memset(buffer, 0x02, 5);
+	buffer = _memset(buffer, 0x01, 95);
+	simple_print_buffer(, 98);
 
 	printf("-------------------------------------------------\n");
+	buffer = _memset(buffer, 0x02, 5);
 	simple_print_buffer(buffer, 98);
 
 	return (0);
