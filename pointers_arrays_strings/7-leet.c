@@ -20,7 +20,7 @@ char *leet(char *c)
 		{
 			if (c[i] == base[j])
 			{
-				c[i] = leet[(j + 1) / 2];
+				c[i] = leet[j / 2];
 			}
 		}
 	}
