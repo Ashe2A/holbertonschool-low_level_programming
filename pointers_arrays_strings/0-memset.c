@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include "2-strlen.c"
 
 /**
  * _memset - fills string with n same chars
@@ -13,7 +13,7 @@ char *_memset(char *s, char b, unsigned int n)
 {
     int i;
 
-    for (i = 0; i < n && (s[i] != '\0') ; i++)
+    for (i = 0; i < n && i < _strlen(s) ; i++)
     {
         s[i] = b;
     }

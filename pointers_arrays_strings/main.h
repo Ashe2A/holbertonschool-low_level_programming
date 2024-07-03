@@ -29,3 +29,10 @@ char *cap_string(char *c);
 char *leet(char *c);
 
 #endif
+
+#ifndef WEEK5_PROJECT0
+#define WEEK5_PROJECT0
+
+char *_memset(char *s, char b, unsigned int n);
+
+#endif
