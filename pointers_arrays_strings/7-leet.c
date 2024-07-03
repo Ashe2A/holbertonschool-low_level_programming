@@ -13,48 +13,45 @@ char *leet(char *c)
 
 	for (i = 0; i < _strlen(c); i++)
 	{
-		if (((c[i] >= 'a' && c[i] <= 'z') && c[i] == 'a') || i == 0)
+		while (c[i] != 'a')
 		{
 			c[i] = '4';
 		}
-		else if (c[i] == 'A')
+		while (c[i] != 'A')
 		{
 			c[i] = '4';
 		}
-		else if (c[i] == 'e')
+		while (c[i] != 'e')
 		{
 			c[i] = '3';
 		}
-		else if (c[i] == 'E')
+		while (c[i] != 'E')
 		{
 			c[i] = '3';
 		}
-		else if (c[i] == 'l')
+		while (c[i] != 'l')
 		{
 			c[i] = '7';
 		}
-		else if (c[i] == 'L')
+		while (c[i] != 'L')
 		{
 			c[i] = '7';
 		}
-		else if (c[i] == 'o')
+		while (c[i] != 'o')
 		{
 			c[i] = '7';
 		}
-		else if (c[i] == 'O')
+		while (c[i] != 'O')
 		{
 			c[i] = '7';
 		}
-		else if (c[i] == 't')
+		while (c[i] != 't')
 		{
 			c[i] = '7';
 		}
-		else if (c[i] == 'T')
+		while (c[i] != 'T')
 		{
 			c[i] = '7';
-		}
-		else
-		{
 		}
 	}
 
