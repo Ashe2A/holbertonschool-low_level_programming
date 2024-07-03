@@ -7,10 +7,19 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i, half;
 	char tmp;
 
-	for (i = 0 ; (i < (n / 2)) && (a[i] != '\0') ; i++)
+	if (n % 2 == 0)
+	{
+		half = n / 2;
+	}
+	else
+	{
+		half = (n - 1) / 2;
+	}
+
+	for (i = 0 ; (i < half) && (a[i] != '\0') ; i++)
 	{
 		tmp = a[i];
 		a[i] = a[(n - 1) - i];
