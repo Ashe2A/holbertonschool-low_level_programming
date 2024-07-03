@@ -10,19 +10,10 @@ void reverse_array(int *a, int n)
 	int i, max;
 	char tmp;
 
-	if (n > _strlen(a))
-	{
-		max = _strlen(a);
-	}
-	else
-	{
-		max = n;
-	}
-
-	for (i = 0 ; i < (max / 2) ; i++)
+	for (i = 0 ; i < ((n + 1) / 2) ; i++)
 	{
 		tmp = a[i];
-		a[i] = a[(max - 1) - i];
-		a[(max - 1) - i] = tmp;
+		a[i] = a[(n - 1) - i];
+		a[(n - 1) - i] = tmp;
 	}
 }
