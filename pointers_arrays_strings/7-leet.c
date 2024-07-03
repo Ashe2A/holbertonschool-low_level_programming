@@ -16,7 +16,7 @@ char *leet(char *c)
 
 	for (i = 0; i < _strlen(c); i++)
 	{
-		for (j = 0 ; j < _strlen(c); j++)
+		for (j = 0 ; j < _strlen(base); j++)
 		{
 			if (c[i] == base[j])
 			{
