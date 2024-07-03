@@ -48,5 +48,9 @@ int main(void)
 	_memset(buffer, 0x02, 5);
 	simple_print_buffer(_memset(buffer, 0x02, 5), 98);
 
+	printf("-------------------------------------------------\n");
+	_memset(buffer, 0x03, 100);
+	simple_print_buffer(_memset(buffer, 0x03, 100), 98);
+
 	return (0);
 }
