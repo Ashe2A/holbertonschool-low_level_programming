@@ -13,9 +13,16 @@ char *_strchr(char *s, char c)
 {
     int i;
 
-    for (i = 0; (s[i] != c) && (i < _strlen(s)); i++)
-    {
-    }
+	for (i = 0; (s[i] != c) && (i < _strlen(s)); i++)
+	{
+	}
 
-    return (s + i);
+	if (i >= _strlen(s))
+	{
+		return (NULL);
+	}
+	else
+	{
+		return (s + i);
+	}
 }
