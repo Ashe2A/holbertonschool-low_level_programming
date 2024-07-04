@@ -1,5 +1,6 @@
 #include "main.h"
 #include "2-strlen.c"
+#include <stddef.h>
 
 /**
  * _strchr - finds a char in a string
