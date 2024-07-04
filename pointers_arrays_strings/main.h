@@ -1,7 +1,6 @@
 #ifndef WEEK4_PROJECT1
 #define WEEK4_PROJECT1
 
-int _putchar(char c);
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
@@ -34,9 +33,17 @@ char *leet(char *c);
 #define WEEK5_PROJECT0
 
 char *_memset(char *s, char b, unsigned int n);
-void simple_print_buffer(char *buffer, unsigned int size);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
+char *_strpbrk(char *s, char *accept);
+
+#endif
+
+#ifndef MISCELLANEOUS
+#define MISCELLANEOUS
+
+int _putchar(char c); /* universal */
+void simple_print_buffer(char *buffer, unsigned int size); /* WEEK5_PROJECT0 0-main.c */
 
 #endif
