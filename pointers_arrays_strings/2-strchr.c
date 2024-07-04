@@ -1,6 +1,6 @@
 #include "main.h"
 #include "2-strlen.c"
-#include <stddef.h>
+#include <stdio.h>
 
 /**
  * _strchr - finds a char in a string
@@ -15,7 +15,6 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; s[i] != c; i++)
 	{
-
 	}
 
 	if (s[i] == '\0')
