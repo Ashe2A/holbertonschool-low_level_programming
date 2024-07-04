@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 
 	}
 
-	if (i == _strlen(s))
+	if (s[i] == '\0')
 	{
 		return (NULL);
 	}
