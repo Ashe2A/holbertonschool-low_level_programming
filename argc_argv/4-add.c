@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i, j, add = 0;
+	char *s = argv[0];
 
 	if (argc == 1)
 	{
@@ -19,17 +20,17 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (j = 0; argv[j] != '\0' ; j++)
-		{
-			if (argv[j] >= '0' && argv[j] <= '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-
 		for (i = 0; i < argc; i++)
 		{
+			for (j = 0; argv[j] != '\0'; j++)
+			{
+				if (argv[i][j] >= '0' && argv[i][j] <= '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+
 			add += atoi(argv[i]);
 		}
 
