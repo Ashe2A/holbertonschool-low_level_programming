@@ -5,7 +5,7 @@
 /**
  * print_diagsums - adds up matrix diagonals
  * @a: matrix
- * @size: size of the matrix	
+ * @size: size of the matrix
  */
 void print_diagsums(int *a, int size)
 {
@@ -16,7 +16,7 @@ void print_diagsums(int *a, int size)
 	for (i = 0 ; i < size; i++)
 	{
 		diag1 += a[i + (size * i)];
-		diag2 += a[(size * i) - 1 - i];
+		diag2 += a[(size * (i + 1)) - 1 - i];
 	}
 
 	printf("%d, ", diag1);
