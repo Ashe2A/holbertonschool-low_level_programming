@@ -32,6 +32,6 @@ int find_sqrt(int n, int x)
 	}
 	else
 	{
-		find_sqrt(n, x + 1);
+		return (find_sqrt(n, x + 1));
 	}
 }
