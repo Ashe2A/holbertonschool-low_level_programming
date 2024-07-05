@@ -43,6 +43,13 @@ void print_diagsums(int *a, int size);
 
 #endif
 
+#ifndef WEEK5_PROJECT1
+#define WEEK5_PROJECT1
+
+void _puts_recursion(char *s);
+
+#endif
+
 #ifndef MISCELLANEOUS
 #define MISCELLANEOUS
 
