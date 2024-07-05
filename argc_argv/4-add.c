@@ -21,19 +21,15 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < argc; i++)
 		{
-			for (j = 0; *(argv[i] + j) != '\0'; j++)
+			if (argv[i] != "0" && atoi(argv[i]) == 0)
 			{
-				if (!(*(argv[i] + j) >= '0' && *(argv[i] + j) <= '9'))
-				{
-					printf("Error\n");
-					return (1);
-				}
+				printf("Error\n");
+				return (1);
 			}
 
 			add += atoi(argv[i]);
+			printf("%d\n", add);
+			return (0);
 		}
-
-		printf("%d\n", add);
-		return (0);
 	}
 }
