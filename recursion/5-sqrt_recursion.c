@@ -21,6 +21,7 @@ int _sqrt_recursion(int n)
 /**
  * find_sqrt - finds square root
  * @n: number to check
+ * @x: moving root
  *
  * Return: square root
  */
