@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-strlen.c"
 
 /**
  * _puts_recursion - prints a string
