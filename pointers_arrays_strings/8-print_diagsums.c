@@ -17,6 +17,7 @@ void print_diagsums(int *a, int size)
 	{
 		diag1 += a[i];
 		diag2 += a[(size - 1) - i];
+		a++;
 	}
 
 	printf("%d, ", diag1);
