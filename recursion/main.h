@@ -13,5 +13,6 @@ int _sqrt_recursion(int n);
 #define MISCELLANEOUS
 
 int _putchar(char c); /* universal */
+int find_sqrt(int n, int x);
 
 #endif
