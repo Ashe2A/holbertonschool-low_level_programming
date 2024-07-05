@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../pointers_arrays_strings/100-atoi.c"
+#include <stdlib.h>
 
 /**
  * main - multiply arguments
@@ -16,6 +16,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	printf("%d\n", _atoi(argv[1]) * _atoi(argv[2]));
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }

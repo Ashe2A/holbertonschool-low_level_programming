@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include "../pointers_arrays_strings/100-atoi.c"
-#include "../pointers_arrays_strings/2-strlen.c"
+#include <stdlib.h>
 
 /**
  * main - multiply arguments
@@ -22,7 +21,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < argc; i++)
 		{
-			for (j = 0; j < _strlen(argv[i]); j++)
+			for (j = 0; j < strlen(argv[i]); j++)
 			{
 				if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
 				{
@@ -31,7 +30,7 @@ int main(int argc, char *argv[])
 				}
 			}
 
-			add += _atoi(argv[i]);
+			add += atoi(argv[i]);
 		}
 
 		printf("%d\n", add);
