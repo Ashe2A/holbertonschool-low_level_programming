@@ -14,5 +14,6 @@ int _sqrt_recursion(int n);
 
 int _putchar(char c); /* universal */
 int find_sqrt(int n, int x);
+int find_prime(int n, int x);
 
 #endif
