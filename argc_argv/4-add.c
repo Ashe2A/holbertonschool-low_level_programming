@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main - multiply arguments
+ * main - add arguments
  * @argc: Arguments count
  * @argv: Arguments array
  *
- * Return: 0 (Success), 1 (Error if more than 2 args)
+ * Return: 0 (Success), 1 (Error if no positive int)
  */
 int main(int argc, char *argv[])
 {
@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < argc; i++)
 		{
-			for (j = 0; argv[i][j] != '\0'; j++)
+			for (j = 0; *(argv[i] + j) != '\0'; j++)
 			{
-				if (argv[i][j] >= '0' && argv[i][j] <= '9')
+				if (*(argv[i] + j) >= '0' && *(argv[i] + j) <= '9')
 				{
 					printf("Error\n");
 					return (1);
