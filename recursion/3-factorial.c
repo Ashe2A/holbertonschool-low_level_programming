@@ -4,7 +4,7 @@
  * factorial - factorial
  * @n: number to factorial
  *
- * Return: result of n!
+ * Return: result of n!, -1 if negative
  */
 int factorial(int n)
 {

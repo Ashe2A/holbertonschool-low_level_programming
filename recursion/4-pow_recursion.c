@@ -5,7 +5,7 @@
  * @x: number to power up
  * @y: power
  *
- * Return: result of x power y
+ * Return: result of x power y, -1 if negative
  */
 int _pow_recursion(int x, int y)
 {
