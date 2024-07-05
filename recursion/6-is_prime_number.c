@@ -14,7 +14,7 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		return (find_sqrt(n, 2));
+		return (find_prime(n, 2));
 	}
 }
 
