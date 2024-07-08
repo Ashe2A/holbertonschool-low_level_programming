@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stddef.h>
+#include <stdlib.h>
+
 
 /**
  * _strdup - copy a string
@@ -13,7 +15,7 @@ char *_strdup(char *str)
     int j;
     char *strcopy;
 
-    while (str != '\0')
+    while (*str[i] != '\0')
     {
         i++;
     }
