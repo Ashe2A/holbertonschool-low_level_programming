@@ -1,7 +1,11 @@
 #include "main.h"
 
 /**
- * create_array -
+ * create_array - fill array with char
+ * @size: size of array
+ * @c: character to fill
+ * 
+ * Return: filled array
  */
 char *create_array(unsigned int size, char c)
 {

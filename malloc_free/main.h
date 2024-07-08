@@ -2,5 +2,6 @@
 #define WEEK6_PROJECT0
 
 char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
 
 #endif
