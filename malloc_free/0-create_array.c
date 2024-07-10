@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * create_array - fill array with char
@@ -21,7 +22,7 @@ char *create_array(unsigned int size, char c)
 
 	for (i = 0 ; i < size ; i++)
 	{
-		a[i] = c;
+		*(a + i) = c;
 	}
 
 	return (a);
