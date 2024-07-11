@@ -30,7 +30,5 @@ char *_strdup(char *str)
 		*(strcopy + i) = str[i];
 	}
 
-	free(strcopy);
-
 	return (strcopy);
 }
