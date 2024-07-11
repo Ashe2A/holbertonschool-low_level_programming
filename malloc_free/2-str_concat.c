@@ -35,20 +35,20 @@ char *str_concat(char *s1, char *s2)
 
 	strcat = malloc(sizeof(char) * (j + 1));
 
-	if (strcat == NULL || strcat == 0)
+	if (strcat == NULL)
 	{
 		return (NULL);
 	}
 
 	for (k = 0; k < i; k++)
 	{
-		*(strcat + k) = s1[k];
+		strcat[k] = s1[k];
 	}
 
 	for (k = 0; k <= j; k++)
 	{
-		*(strcat (k + i)) = s2[k];
+		strcat[k + i] = s2[k];
 	}
-	
+
 	return (strcat);
 }
