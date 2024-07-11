@@ -2,7 +2,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-
 /**
  * _strdup - copy a string
  * @str: array to copy
@@ -18,16 +17,16 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 	{
 		i++;
-    }
-
-    if (str == NULL || i == 0)
-	{
-		return (NULL);
 	}
 
 	strcopy = malloc(sizeof(char) * i);
 
-	for (j = 0; j < i; j++)
+	if (str == NULL || str <= 0 || strcopy <= 0 || strcopy == NULL || i <= 0)
+	{
+		return (NULL);
+	}
+
+	for (j = 0; j <= i; j++)
 	{
 		strcopy[i] = str[i];
 	}

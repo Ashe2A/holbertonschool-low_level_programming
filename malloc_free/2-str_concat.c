@@ -2,35 +2,57 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-
 /**
- * _strdup - copy a string
- * @str: array to copy
+ * str_concat - concatenes strings
+ * @s1: first string
+ * @s2: second string
  *
- * Return: string copy
+ * Return: concatened strings
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	int i = 0;
-	int j;
-	char *strcopy;
+	int i;
+	int j, k;
+	char *strcat;
 
-	while (str[i] != '\0')
+	if (s1 == NULL)
 	{
-		i++;
-    }
+		i = 0;
+	}
+	else
+	{
+		while (s1[i] != '\0')
+		{
+			i++;
+		}
+	}
 
-    if (str == NULL || i == 0)
+	j = i;
+
+	if (s2 != NULL)
+	{
+		while (s2[i] != '\0')
+		{
+			j++;
+		}
+	}
+
+	strcat = malloc(sizeof(char) * i);
+
+	if (strcat == NULL || strcat <= 0)
 	{
 		return (NULL);
 	}
 
-	strcopy = malloc(sizeof(char) * i);
-
-	for (j = 0; j < i; j++)
+	for (k = 0; k < i; k++)
 	{
-		strcopy[i] = str[i];
+		strcat[k] = s1[k];
 	}
 
-	return (strcopy);
+	for (k = 0; k <= j; k++)
+	{
+		strcat[k + i] = s2[k];
+	}
+
+	return (strcat);
 }
