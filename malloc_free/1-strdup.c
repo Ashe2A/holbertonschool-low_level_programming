@@ -27,8 +27,10 @@ char *_strdup(char *str)
 
 	for (j = 0; j <= i; j++)
 	{
-		strcopy[i] = str[i];
+		*(strcopy + i) = str[i];
 	}
+
+	free(strcopy);
 
 	return (strcopy);
 }

@@ -42,13 +42,15 @@ char *str_concat(char *s1, char *s2)
 
 	for (k = 0; k < i; k++)
 	{
-		strcat[k] = s1[k];
+		*(strcat + k) = s1[k];
 	}
 
 	for (k = 0; k <= j; k++)
 	{
-		strcat[k + i] = s2[k];
+		*(strcat (k + i)) = s2[k];
 	}
+
+	free(strcat);
 
 	return (strcat);
 }
