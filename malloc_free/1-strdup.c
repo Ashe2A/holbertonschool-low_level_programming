@@ -24,7 +24,7 @@ char *_strdup(char *str)
 		/* Counter for size of str */
 	}
 
-	strcopy = malloc(sizeof(char) * i);
+	strcopy = malloc(sizeof(char) * (i - 1));
 
 	if (strcopy == NULL || strcopy == 0)
 	{
