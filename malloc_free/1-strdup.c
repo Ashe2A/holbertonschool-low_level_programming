@@ -30,7 +30,7 @@ char *_strdup(char *str)
 		return (strcopy);
 	}
 
-	for (j = 0; j < (int)strlen(str); j++)
+	for (j = 0; j < i; j++)
 	{
 		strcopy[j] = str[j];
 	}
