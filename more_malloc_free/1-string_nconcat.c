@@ -15,9 +15,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *strcat;
 
 	if (s1 == NULL)
-		s1 = "";
-	if (s1 == NULL)
-		s2 = "";
+		return string_nconcat("", s2, n);
+	if (s2 == NULL)
+		return string_nconcat(s1, "", n);
 
 	if (n < _strlen(s2))
 		head_s2 = n;
