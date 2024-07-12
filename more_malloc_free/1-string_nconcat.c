@@ -9,7 +9,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int head_s2, i, j;
+	unsigned int head_s2, i, j;
 	char *strcat;
 
 	if (s1 == NULL)
@@ -59,9 +59,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  *
  * Return: string length
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int i = 0;
+	unsigned int i = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
