@@ -23,12 +23,7 @@ char *_strdup(char *str)
 		/* Counter for strlen */
 	}
 
-	if (i == 0)
-	{
-		i += 2;
-	}
-
-	strcopy = (char *)malloc(sizeof(char) * (i - 2));
+	strcopy = (char *)malloc(sizeof(char) * i);
 
 	if (strcopy == NULL || strcopy == 0)
 	{
