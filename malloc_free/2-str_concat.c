@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 }
 
 /**
- * str_concat - separate function to concatene strings
+ * concatene_the_strings - separate function to concatene strings
  * @size1: s1 size
  * @size2: s2 size
  *
