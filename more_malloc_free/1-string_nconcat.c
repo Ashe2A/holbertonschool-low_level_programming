@@ -3,53 +3,36 @@
 
 /**
  * string_nconcat - concatenes two strings
- * @b: size the allocated memory
+ * @s1: first string
+ * @s2: second string
+ * @n: length of the second string
  *
- * Return: filled array
+ * Return: concatened two strings
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int head_s2, i, j;
+	unsigned int i, j;
 	char *strcat;
 
 	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
+		return (string_nconcat("", s2, n));
+	if (s1 == NULL)
+		return (string_nconcat(s1, "", n));
 
 	if (n < _strlen(s2))
-	{
-		head_s2 = n;
-	}
+		strcat = (char *)malloc(sizeof(char) * (_strlen(s1) + n) + 1);
 	else
-	{
-		head_s2 = _strlen(s2);
-	}
-
-	strcat = (char *)malloc(sizeof(char) * (_strlen(s1) + head_s2) + 1);
+		strcat = (char *)malloc(sizeof(char) * (_strlen(s1) + _strlen(s2)) + 1);
 
 	if (strcat == NULL || strcat == 0)
-	{
 		return (strcat);
-	}
 
 	for (i = 0; i < _strlen(s1); i++)
-	{
 		strcat[i] = s1[i];
-	}
-
 	for (j = 0; j < head_s2; j++)
-	{
 		strcat[j + i] = s2[j];
-	}
 
 	strcat[j + i] = '\0';
-
 	return (strcat);
 }
 
