@@ -4,9 +4,9 @@
 /**
  * _calloc - contiguous allocation
  * @nmemb: number of bytes
- * @size: size of pointer
+ * @size: size of array
  *
- * Return: 
+ * Return: calloc of array
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
