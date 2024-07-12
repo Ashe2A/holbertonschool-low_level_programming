@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 
-	return (concatene_the_strings(i, j));
+	return (concatene_the_strings(s1, s2, i, j));
 }
 
 /**
@@ -42,7 +42,7 @@ char *str_concat(char *s1, char *s2)
  *
  * Return: concatened strings
  */
-char *concatene_the_strings(int size1, int size2)
+char *concatene_the_strings(char *string1, char *string2, int size1, int size2)
 {
 	char *strcat = malloc(sizeof(char) * size2 + 1);
 	int k;
@@ -54,12 +54,12 @@ char *concatene_the_strings(int size1, int size2)
 
 	for (k = 0; k < size1; k++)
 	{
-		strcat[k] = s1[k];
+		strcat[k] = string1[k];
 	}
 
 	for (k = size1; k < size2; k++)
 	{
-		strcat[k] = s2[k];
+		strcat[k] = string2[k];
 	}
 
 	return (strcat);
