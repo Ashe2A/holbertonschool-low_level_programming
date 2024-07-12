@@ -11,6 +11,6 @@ int **alloc_grid(int width, int height);
 #ifndef MISCELLANEOUS
 #define MISCELLANEOUS
 
-char *concatene_the_strings(int size1, int size2);
+char *concatene_the_strings(char *string1, char *string2, int size1, int size2);
 
 #endif
