@@ -18,8 +18,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s2 == NULL)
 			return ("");
-		else
-			return (s1);
+
+		return (s2);
 	}
 	else if (s2 == NULL)
 		return (s1);
@@ -49,21 +49,21 @@ char *concatene_the_strings(char *string1, char *string2, int size1, int size2)
 	char *strcat;
 	int k;
 
-	strcat = (char *)malloc(sizeof(char) * j + 1);
+	strcat = (char *)malloc(sizeof(char) * size2 + 1);
 
 	if (strcat == NULL || strcat == 0)
 	{
 		return (strcat);
 	}
 
-	for (k = 0; k < i; k++)
+	for (k = 0; k < size1; k++)
 	{
-		strcat[k] = s1[k];
+		strcat[k] = string1[k];
 	}
 
-	for (k = i; k < j; k++)
+	for (k = size1; k < size2; k++)
 	{
-		strcat[k] = s2[k - i];
+		strcat[k] = string2[k - size1];
 	}
 
 	return (strcat);
