@@ -17,23 +17,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s2 == NULL)
 			return ("");
-		else
-			return (s1);
-	}
-	else
-	{
+
+		return (s1);
+
 		if (s2 == NULL)
 			return (s1);
-		else
+
+		for (i = 0; s1[i] != '\0'; i++)
 		{
-			for (i = 0; s1[i] != '\0'; i++)
-			{
-			}
-			for (j = i; s2[j - i] != '\0'; j++)
-			{
-			}
+		}
+
+		for (j = i; s2[j - i] != '\0'; j++)
+		{
 		}
 	}
+
 	return (concatene_the_strings(i, j));
 }
 
