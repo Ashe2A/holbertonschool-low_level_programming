@@ -17,24 +17,33 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		i = 0;
+		if (s2 == NULL)
+		{
+			return ("");
+		}
+		else
+		{
+			return (s1);
+		}
 	}
 	else
 	{
-		for (i = 0; s1[i] != '\0'; i++)
+		if (s2 == NULL)
 		{
+			return (s1);
 		}
-	}
+		else
+		{
+			for (i = 0; s1[i] != '\0'; i++)
+			{
+				/* s1 size counter */
+			}
 
-	if (s2 != NULL)
-	{
-		for (j = i; s2[j - i] != '\0'; j++)
-		{
+			for (j = i; s2[j - i] != '\0'; j++)
+			{
+				/* s2 size counter */
+			}
 		}
-	}
-	else
-	{
-		j = i;
 	}
 
 	strcat = malloc(sizeof(char) * j + 1);
