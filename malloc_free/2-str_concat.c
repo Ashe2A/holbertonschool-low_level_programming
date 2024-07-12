@@ -11,68 +11,51 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0;
-	int j = 0;
+	int i, j, k;
 	char *strcat;
 
 	if (s1 == NULL)
 	{
-		if (s2 == NULL)
-		{
-			*strcat = "";
-			return (strcat);
-		}
+		s1 = "";
+	}
 
-		*strcat = s2;
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	strcat = (char *)malloc(sizeof(char) * (_strlen(s1) + _strlen(s2)) + 1);
+
+	if (strcat == NULL || strcat == 0)
+	{
 		return (strcat);
 	}
-	else if (s2 == NULL)
+
+	for (i = 0; k < _strlen(s1); i++)
 	{
-		*strcat = s1;
-		return (strcat);
+		strcat[i] = s1[i];
 	}
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (j = 0; j < _strlen(s2); j++)
 	{
+		strcat[j + i] = s2[j];
 	}
-
-	for (j = i; s2[j - i] != '\0'; j++)
-	{
-	}
-
-	return (concatene_the_strings(s1, s2, i, j));
 }
 
 /**
- * concatene_the_strings - separate function to concatene strings
- * @string1: first string
- * @string2: second string
- * @i: s1 size
- * @j: s2 size
+ * _strlen - string length
+ * @s: string (pointer of char)
  *
- * Return: concatened strings
+ * Return: string length
  */
-char *concatene_the_strings(char *string1, char *string2, int size1, int size2)
+int _strlen(char *s)
 {
-	char *newcat;
-	int k;
+	int i = 0;
 
-	strcat = (char *)malloc(sizeof(char) * size2 + 1);
-
-	if (newcat == NULL || newcat == 0)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		return (newcat);
+		/* Counter */
 	}
 
-	for (k = 0; k < size1; k++)
-	{
-		newcat[k] = newcat[k];
-	}
-
-	for (k = size1; k < size2; k++)
-	{
-		newcat[k] = string2[k - size1];
-	}
-
-	return (newcat);
+	return (i);
 }
