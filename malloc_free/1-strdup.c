@@ -25,10 +25,10 @@ char *_strdup(char *str)
 
 	if (i == 0)
 	{
-		i++;
+		i += 2;
 	}
 
-	strcopy = (char *)malloc(sizeof(char) * (i - 1));
+	strcopy = (char *)malloc(sizeof(char) * (i - 2));
 
 	if (strcopy == NULL || strcopy == 0)
 	{
