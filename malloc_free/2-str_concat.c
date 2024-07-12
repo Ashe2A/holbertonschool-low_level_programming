@@ -45,12 +45,14 @@ char *str_concat(char *s1, char *s2)
  */
 char *concatene_the_strings(char *string1, char *string2, int size1, int size2)
 {
-	char *strcat = malloc(sizeof(char) * size2 + 1);
+	char *strcat;
 	int k;
 
-	if (strcat == NULL)
+	strcat = (char *)malloc(sizeof(char) * size2 + 1);
+
+	if (strcat == NULL || strcat == 0)
 	{
-		return (NULL);
+		return (strcat);
 	}
 
 	for (k = 0; k < size1; k++)
@@ -60,7 +62,7 @@ char *concatene_the_strings(char *string1, char *string2, int size1, int size2)
 
 	for (k = size1; k < size2; k++)
 	{
-		strcat[k] = string2[k];
+		strcat[k] = string2[k - size1];
 	}
 
 	return (strcat);
