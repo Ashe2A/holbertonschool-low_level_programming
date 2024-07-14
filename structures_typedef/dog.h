@@ -16,6 +16,11 @@ struct dog
 	char *owner;
 };
 
+#endif
+
+#ifndef FUNCTION
+#define FUNCTION
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
