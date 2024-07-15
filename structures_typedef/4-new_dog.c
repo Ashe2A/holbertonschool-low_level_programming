@@ -9,6 +9,8 @@
  * @name: doggie name
  * @age: doggie age
  * @owner: dog owner
+ *
+ * Return: The new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -16,7 +18,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *namecpy;
 	char *ownercpy;
 
-	doggie = malloc(sizeof(name) + sizeof(age) + sizeof(owner));
+	doggie = malloc(sizeof(char) * _strlen(name)
+	+ sizeof(char) * _strlen(owner) + sizeof(float));
 
 	init_dog(doggie, name, age, owner);
 
