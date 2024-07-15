@@ -9,7 +9,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t doggie;
+	dog_t *doggie;
 
 	init_dog(doggie, name, age, owner);
 
