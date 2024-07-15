@@ -18,6 +18,26 @@ struct dog
 
 #endif
 
+#ifndef DOGGIE_TYPE
+#define DOGGIE_TYPE
+
+/**
+ * struct dog_t - Dog new type
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Dog's owner
+ *
+ * Description: New type of doggie
+ */
+struct dog_t
+{
+	char *name;
+	float age;
+	char *owner;
+};
+
+#endif
+
 #ifndef FUNCTION
 #define FUNCTION
 
