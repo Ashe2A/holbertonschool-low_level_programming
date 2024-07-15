@@ -17,10 +17,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	init_dog(doggie, name, age, owner);
 
-	if (doggie == NULL)
+	if (doggie == NULL)	
 	{
 		return (NULL);
 	}
+
+	free(doggie);
 
 	return (doggie);
 }
