@@ -4,12 +4,11 @@
 /**
  * init_dog - create a dog
  * @d: doggie
- * @name: doggie name
- * @age: doggie age
- * @owner: dog owner
  */
 void print_dog(struct dog *d)
 {
+	float null;
+
 	if (d != NULL)
 	{
 		if ((*d).name == NULL)
@@ -21,7 +20,7 @@ void print_dog(struct dog *d)
 			printf("Name: %s", (*d).name);
 		}
 
-		if ((*d).age == NULL)
+		if ((*d).age == null)
 		{
 			printf("Age: (nil)");
 		}
