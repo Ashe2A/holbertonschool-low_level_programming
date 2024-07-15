@@ -9,14 +9,12 @@
  *
  * Description: Create a doggie
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
-
-typedef dog dog_t;
+} dog_t ;
 
 #endif
 
