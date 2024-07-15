@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * init_dog - create a dog
+ * print_dog - print a dog
  * @d: doggie
  */
 void print_dog(struct dog *d)
