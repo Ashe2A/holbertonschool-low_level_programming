@@ -19,12 +19,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggie = malloc(sizeof(char) * _strlen(name)
 	+ sizeof(char) * _strlen(owner) + sizeof(float));
 
-	init_dog(doggie, _strcpy((*dog_t).name, name), age, _strcpy((*dog_t).owner, owner));
+	init_dog(doggie, _strcpy((*doggie).name, name), age, _strcpy((*doggie).owner, owner));
 
 	if (doggie == NULL)
 	{
 		return (NULL);
 	}
-	
+
 	return (doggie);
 }
