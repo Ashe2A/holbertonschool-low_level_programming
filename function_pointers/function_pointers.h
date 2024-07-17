@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 #ifndef WEEK7_PROJECT0
 #define WEEK7_PROJECT0
 
