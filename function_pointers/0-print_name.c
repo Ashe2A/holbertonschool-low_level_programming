@@ -9,6 +9,9 @@ void print_name(char *name, void (*f)(char *))
 {
 	if (name != NULL && f != NULL)
 	{
-		f(name);
+		if (f == print_name_uppercase && ((name >= 'a' && name <= 'z') || (name >= 'A' && name <= 'Z')))
+		{
+			f(name);
+		}
 	}
 }
