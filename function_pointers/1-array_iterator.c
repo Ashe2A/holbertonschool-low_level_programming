@@ -8,11 +8,20 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-    size_t i;
+    size_t i, max;
 
 	if (action != NULL && array != NULL && size != 0)
 	{
-		for (i = 0; i < size; i++)
+        if (size > _strlen(array))
+        {
+            max = _strlen(array)
+        }
+        else
+        {
+            max = size;
+        }
+
+		for (i = 0; i < max; i++)
 		{
 			action(array[i]);
 		}
