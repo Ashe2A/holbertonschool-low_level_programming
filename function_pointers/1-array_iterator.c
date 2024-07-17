@@ -1,5 +1,7 @@
 #include "function_pointers.h"
 #include <stdio.h>
+#include "../pointers_arrays_strings/2-strlen.c"
+
 /**
  * array_iterator - iterates on an array
  * @array: array to iterate
@@ -14,7 +16,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	{
         if (size > _strlen(array))
         {
-            max = _strlen(array)
+            max = _strlen(array);
         }
         else
         {
