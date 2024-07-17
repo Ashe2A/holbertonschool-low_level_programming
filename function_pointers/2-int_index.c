@@ -15,9 +15,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	if (!(cmp == NULL || array == NULL || size <= 0))
 	{
-		if (size > sizeof(array))
+		if (size > (int)sizeof(array))
 		{
-			max = sizeof(array);
+			max = (int)sizeof(array);
 		}
 		else
 		{
