@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
 
 /** op_add - add integers
  * @a: first integer
