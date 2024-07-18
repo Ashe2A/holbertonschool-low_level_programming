@@ -6,7 +6,7 @@
  *
  * @op: The operator
  * @f: The function associated
- * 
+ *
  * Description: Declare operations and their associated functions
  */
 typedef struct op

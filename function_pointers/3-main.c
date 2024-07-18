@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int op_res;
-	
+
 	if (argc != 4)
 	{
 		printf("Error");
@@ -26,13 +26,14 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && atoi(argv[3]) == 0)
+	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)
+    && atoi(argv[3]) == 0)
 	{
 		printf("Error");
 		exit(100);
 	}
 
-    op_res = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
+	op_res = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", op_res);
 
 	return (0);
