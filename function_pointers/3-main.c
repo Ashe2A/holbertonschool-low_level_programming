@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - check the code
@@ -19,19 +20,20 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])) == NULL)
+	if (get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])) == 0)
 	{
 		printf("Error");
 		exit(99);
 	}
 
-	if ((argv[2] == "/" || argv[2] == "%") && atoi(argv[3]) == 0)
+	if ((strcmp(argv[2], "/") || strcmp(argv[2] == "%")) && atoi(argv[3]) == 0)
 	{
 		printf("Error");
 		exit(100);
 	}
 
-	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+    op_res = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", op_res);
 
 	return (0);
 }

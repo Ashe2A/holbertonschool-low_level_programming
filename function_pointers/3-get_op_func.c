@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stddef.h>
 
 /**
  * get_op_func - get operation functions
@@ -17,7 +18,7 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}};
 	int i;
 
-	for (i = 0; i < sizeof(ops); i++)
+	for (i = 0; i < (int)sizeof(ops); i++)
 	{
 		if (ops[i].op == s[0] && s[1] == '\0')
 		{
@@ -25,5 +26,5 @@ int (*get_op_func(char *s))(int, int)
 		}
 	}
 
-	return (NULL);
+	return (0);
 }
