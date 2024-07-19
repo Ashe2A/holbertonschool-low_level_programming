@@ -9,20 +9,11 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i, max;
+	size_t i;
 
 	if (!(action == NULL || array == NULL || size <= 0))
 	{
-		if (size > (int)sizeof(array))
-		{
-			max = (int)sizeof(array);
-		}
-		else
-		{
-			max = size;
-		}
-
-		for (i = 0; i < max; i++)
+		for (i = 0; i < size; i++)
 		{
 			action(array[i]);
 		}
