@@ -25,7 +25,7 @@ void print_all(const char *const format, ...)
 	{
 		j = 0;
 
-		while (format_ind[j].f != '\0')
+		while (format_ind[j].var_type_ind != '\0')
 		{
 			j++;
 
