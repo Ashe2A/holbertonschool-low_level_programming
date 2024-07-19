@@ -2,6 +2,7 @@
 #include "variadic_functions.h"
 #include <stddef.h>
 #include <stdio.h>
+#include "../malloc_free/1-strdup.c"
 
 /**
  * print_strings - print several strings
@@ -12,6 +13,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list strings;
+    char *new_str;
 
 	if (separator == NULL)
 	{
@@ -24,9 +26,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		for (i = 0; i < n; i++)
 		{
-			if (va_arg(strings, char*) != NULL)
+            *new_str = _strdup(va_arg(strings, char*));
+
+			if ( != NULL)
 			{
-				printf("%s", va_arg(strings, char*));
+				printf("%s", new_str);
 			}
 			else
 			{
@@ -37,6 +41,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				printf("%s", separator);
 			}
+            
+            free(new_str);
 		}
 
 		va_end(strings);
