@@ -19,7 +19,12 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}};
 	int i = 0;
 
-	while (i < (int)sizeof(ops))
+	if (s == NULL)
+	{
+		return (0);
+	}
+	
+	while (i < 5)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 		{
