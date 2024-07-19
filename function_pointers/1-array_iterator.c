@@ -13,9 +13,9 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (!(action == NULL || array == NULL || size <= 0))
 	{
-		if (size > sizeof(array))
+		if (size > sizeof(array) / sizeof(int))
 		{
-			max = sizeof(array);
+			max = sizeof(array) / sizeof(int);
 		}
 		else
 		{
