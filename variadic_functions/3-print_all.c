@@ -30,7 +30,7 @@ void print_all(const char *const format, ...)
 		{
 			if ((format_ind[j].var_type_ind) == format[i])
 			{
-				format_ind[j].type_print(params);
+				format_ind[j].type_print(&params);
 			}
 
 			j++;
