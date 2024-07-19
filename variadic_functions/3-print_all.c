@@ -79,7 +79,7 @@ void string_var_param(va_list *string_params)
 
 	if (new_str == NULL)
 	{
-		new_str == "(nil)";
+		new_str = "(nil)";
 	}
 
 	printf("%s", new_str);
