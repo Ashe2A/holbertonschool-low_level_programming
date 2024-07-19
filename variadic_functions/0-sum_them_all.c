@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include "function_pointers.h"
+#include <stdarg.h>
+#include "variadic_functions.h"
 
 /**
  * sum_them_all - sum several integers
