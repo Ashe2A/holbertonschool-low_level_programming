@@ -27,14 +27,14 @@ void print_all(const char *const format, ...)
 
 		while (format_ind[j].var_type_ind != '\0')
 		{
-			j++;
-
 			if (format_ind[j].var_type_ind == format[i])
 			{
 				printf("%s", separator);
 				format_ind[j].type_print(&params);
 				separator = ", ";
 			}
+
+			j++;
 		}
 
 		i++;
