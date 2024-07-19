@@ -9,7 +9,7 @@
 void print_all(const char *const format, ...)
 {
 	int i = 0;
-	int j;
+	int j = 0;
 	char *separator = "";
 	ind_t format_ind[] = {
 		{'f', float_var_param},
@@ -37,9 +37,8 @@ void print_all(const char *const format, ...)
 
 		i++;
 	}
-
-	printf("\n");
 	va_end(params);
+	printf("\n");
 }
 
 /**
