@@ -5,6 +5,8 @@
 /**
  * sum_them_all - sum several integers
  * @n: integers to sum
+ * 
+ * Return: sum of the integers
  */
 int sum_them_all(const unsigned int n, ...)
 {
@@ -14,7 +16,7 @@ int sum_them_all(const unsigned int n, ...)
 	return (n == 0);
 
 	va_start(terms, n);
-	
+
 	for (i = 0; i <= n; i++)
 	{
 		res += va_arg(terms, int);
