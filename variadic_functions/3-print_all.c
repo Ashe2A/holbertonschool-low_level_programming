@@ -9,7 +9,7 @@
 void print_all(const char *const format, ...)
 {
 	int i = 0;
-	int j = 0;
+	int j;
 	char *separator = "";
 	ind_t format_ind[] = {
 		{'f', float_var_param},
@@ -24,9 +24,9 @@ void print_all(const char *const format, ...)
 	{
 		j = 0;
 
-		while (format_ind[j].var_type_ind != '\0')
+		while (format_ind[j].type_print != NULL)
 		{
-			if (format_ind[j].var_type_ind == format[i])
+			if (format_ind[j].var_type_ind == format[i] && format_ind[j].var_type_ind != '\0')
 			{
 				printf("%s", separator);
 				format_ind[j].type_print(params);
