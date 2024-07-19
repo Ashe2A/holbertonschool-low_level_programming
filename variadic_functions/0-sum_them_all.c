@@ -1,10 +1,9 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
-#include <stddef.h>
 
 /**
  * sum_them_all - sum several integers
- * @n: integers to sum
+ * @n: number of terms
  *
  * Return: sum of the integers
  */
