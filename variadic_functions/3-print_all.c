@@ -33,7 +33,7 @@ void print_all(const char *const format, ...)
 		if (format_ind[j].var_type_ind == format[i])
 		{
 			printf("%s", separator);
-			format_ind[j].type_print(&params);
+			format_ind[j].type_print(params);
 			separator = ", ";
 		}
 
@@ -81,7 +81,8 @@ void string_var_param(va_list *string_params)
 
 	if (new_str == NULL)
 	{
-		new_str = "(nil)";
+		printf("%s", "(nil)");
+		return;
 	}
 
 	printf("%s", new_str);
