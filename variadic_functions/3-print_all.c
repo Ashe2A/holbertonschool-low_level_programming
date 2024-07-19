@@ -24,16 +24,15 @@ void print_all(const char *const format, ...)
 	{
 		j = 0;
 
-		while ((format_ind[j].var_type_ind != '\0') || (format_ind[j].var_type_ind != format[i]))
+		while (format_ind[j].var_type_ind != '\0')
 		{
+			if (format_ind[j].var_type_ind == format[i])
+			{
+				printf("%s", separator);
+				format_ind[j].type_print(params);
+				separator = ", ";
+			}
 			j++;
-		}
-
-		if (format_ind[j].var_type_ind == format[i])
-		{
-			printf("%s", separator);
-			format_ind[j].type_print(params);
-			separator = ", ";
 		}
 
 		i++;
