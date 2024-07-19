@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * array_iterator - iterates on an array
+ * int_index - iterates on an array
  * @array: array to seek
  * @size: size of the array
  * @cmp: compare function
@@ -26,7 +26,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 		for (i = 0; i < max; i++)
 		{
-			if (cmp(array[i]))
+			if (cmp(array[i]) == 1)
 			{
 				return (i);
 			}
