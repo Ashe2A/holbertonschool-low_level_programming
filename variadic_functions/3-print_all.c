@@ -12,10 +12,10 @@ void print_all(const char *const format, ...)
 	int j;
 	char *separator = "";
 	ind_t format_ind[] = {
-		{'c', char_var_param},
-		{'i', int_var_param},
 		{'f', float_var_param},
+		{'c', char_var_param},
 		{'s', string_var_param},
+		{'i', int_var_param},
 		{'\0', NULL}};
 	va_list params;
 
