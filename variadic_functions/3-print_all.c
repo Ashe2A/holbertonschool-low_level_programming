@@ -48,36 +48,36 @@ void print_all(const char *const format, ...)
  * char_var_param - print char parameters
  * @char_params: char parameters
  */
-void char_var_param(va_list *char_params)
+void char_var_param(va_list char_params)
 {
-	_putchar(va_arg(*char_params, int));
+	_putchar(va_arg(char_params, int));
 }
 
 /**
  * int_var_param - print int parameters
  * @int_params: int parameters
  */
-void int_var_param(va_list *int_params)
+void int_var_param(va_list int_params)
 {
-	printf("%d", va_arg(*int_params, int));
+	printf("%d", va_arg(int_params, int));
 }
 
 /**
  * float_var_param - print float parameters
  * @float_params: float parameters
  */
-void float_var_param(va_list *float_params)
+void float_var_param(va_list float_params)
 {
-	printf("%f", va_arg(*float_params, double));
+	printf("%f", va_arg(float_params, double));
 }
 
 /**
  * string_var_param - print string parameters
  * @string_params: string parameters
  */
-void string_var_param(va_list *string_params)
+void string_var_param(va_list string_params)
 {
-	char *new_str = va_arg(*string_params, char *);
+	char *new_str = va_arg(string_params, char *);
 
 	if (new_str == NULL)
 	{
