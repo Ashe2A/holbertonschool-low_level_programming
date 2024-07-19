@@ -17,8 +17,8 @@ void _putchar(char c);
 
 typedef struct indicator
 {
-    char var_type_ind;
-    void (*type_print)(va_list *);
+	char var_type_ind;
+	void (*type_print)(va_list *);
 } ind_t;
 
 void char_var_param(va_list *);
