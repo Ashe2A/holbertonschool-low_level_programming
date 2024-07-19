@@ -52,7 +52,7 @@ void print_all(const char *const format, ...)
  */
 void char_var_param(va_list *char_params)
 {
-	_putchar(va_arg(*char_params, char));
+	_putchar(va_arg(*char_params, int));
 }
 
 /**
@@ -70,7 +70,7 @@ void int_var_param(va_list *int_params)
  */
 void float_var_param(va_list *float_params)
 {
-	printf("%f", va_arg(*float_params, float));
+	printf("%f", va_arg(*float_params, double));
 }
 
 /**
