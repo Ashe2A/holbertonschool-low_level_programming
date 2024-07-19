@@ -11,8 +11,6 @@ void print_all(const char *const format, ...)
 {
 	int i = 0;
 	int j;
-	int ignore_char = 0;
-	char *new_str;
 	ind_t format_ind[] = {
 		{'c', char_var_param},
 		{'i', int_var_param},
@@ -40,7 +38,7 @@ void print_all(const char *const format, ...)
 
 		if (format[i] != '\0')
 		{
-			prinf(", ");
+			printf(", ");
 		}
 	}
 
@@ -54,7 +52,7 @@ void print_all(const char *const format, ...)
  */
 void char_var_param(va_list *char_params)
 {
-	_putchar(va_arg(char_params, char));
+	_putchar(va_arg(*char_params, char));
 }
 
 /**
@@ -63,7 +61,7 @@ void char_var_param(va_list *char_params)
  */
 void int_var_param(va_list *int_params)
 {
-	printf("%d", va_arg(int_params, int));
+	printf("%d", va_arg(*int_params, int));
 }
 
 /**
@@ -72,7 +70,7 @@ void int_var_param(va_list *int_params)
  */
 void float_var_param(va_list *float_params)
 {
-	printf("%f", va_arg(float_params, float));
+	printf("%f", va_arg(*float_params, float));
 }
 
 /**
@@ -81,7 +79,7 @@ void float_var_param(va_list *float_params)
  */
 void string_var_param(va_list *string_params)
 {
-	char *new_str = va_arg(string_params, char *);
+	char *new_str = va_arg(*string_params, char *);
 
 	if (new_str != NULL)
 	{
