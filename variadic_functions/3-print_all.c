@@ -11,7 +11,7 @@ void print_all(const char *const format, ...)
 {
 	int i = 0;
 	int j;
-	char *seperator = "";
+	char *separator = "";
 	ind_t format_ind[] = {
 		{'c', char_var_param},
 		{'i', int_var_param},
@@ -34,7 +34,7 @@ void print_all(const char *const format, ...)
 
 		if (format_ind[j].type_print != NULL)
 		{
-			printf("%s", seperator);
+			printf("%s", separator);
 			format_ind[j].type_print(&params);
 			separator = ", ";
 		}
