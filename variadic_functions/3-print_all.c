@@ -11,6 +11,7 @@ void print_all(const char *const format, ...)
 {
 	int i = 0;
 	int j;
+	char *seperator = "";
 	ind_t format_ind[] = {
 		{'c', char_var_param},
 		{'i', int_var_param},
@@ -20,21 +21,22 @@ void print_all(const char *const format, ...)
 	va_list params;
 
 	va_start(params, format);
-	while (format[i + 1] != '\0')
+	while (format[i] != '\0')
 	{
 		j = 0;
 
-		while ((j < 4 || format_ind[j].var_type_ind) == format[i])
+		while ((format_ind[j].var_type_ind != format[i]) && (format_ind[j].type_print != NULL))
 		{
-			format_ind[j].type_print(&params);
 			j++;
 		}
 
 		i++;
 
-		if (format[i] != '\0')
+		if (format_ind[j].type_print != NULL)
 		{
-			printf(", ");
+			printf(seperator);
+			format_ind[j].type_print(&params);
+			separator = ", ";
 		}
 	}
 
