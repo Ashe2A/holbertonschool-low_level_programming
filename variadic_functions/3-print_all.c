@@ -30,14 +30,14 @@ void print_all(const char *const format, ...)
 			j++;
 		}
 
-		i++;
-
 		if (format_ind[j].type_print != NULL)
 		{
 			printf("%s", separator);
 			format_ind[j].type_print(&params);
 			separator = ", ";
 		}
+
+		i++;
 	}
 
 	printf("\n");
