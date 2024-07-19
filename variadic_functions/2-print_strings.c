@@ -28,7 +28,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
             *new_str = _strdup(va_arg(strings, char*));
 
-			if ( != NULL)
+			if (new_str != NULL)
 			{
 				printf("%s", new_str);
 			}
