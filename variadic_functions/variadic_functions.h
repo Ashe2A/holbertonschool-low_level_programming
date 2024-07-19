@@ -4,13 +4,13 @@
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
-void print_all(const char * const format, ...);
+void print_all(const char *const format, ...);
 
 #endif
 
 #ifndef MISC
 #define MISC
 
-char *_strcpy(char *dest, char *src);
+void _putchar(char c);
 
 #endif
