@@ -25,7 +25,7 @@ void print_all(const char *const format, ...)
 	{
 		j = 0;
 
-		while (format_ind[j].var_type_ind != '\0' && format_ind[j].var_type_ind != format[i])
+		while ((format_ind[j].var_type_ind != '\0') && (format_ind[j].var_type_ind != format[i]))
 		{
 			j++;
 		}
@@ -46,38 +46,38 @@ void print_all(const char *const format, ...)
 
 /**
  * char_var_param - print char parameters
- * @char_params: char parameters
+ * @params: char parameters
  */
-void char_var_param(va_list char_params)
+void char_var_param(va_list params)
 {
-	_putchar(va_arg(char_params, int));
+	_putchar(va_arg(params, int));
 }
 
 /**
  * int_var_param - print int parameters
- * @int_params: int parameters
+ * @params: int parameters
  */
-void int_var_param(va_list int_params)
+void int_var_param(va_list params)
 {
-	printf("%d", va_arg(int_params, int));
+	printf("%d", va_arg(params, int));
 }
 
 /**
  * float_var_param - print float parameters
- * @float_params: float parameters
+ * @params: float parameters
  */
-void float_var_param(va_list float_params)
+void float_var_param(va_list params)
 {
-	printf("%f", va_arg(float_params, double));
+	printf("%f", va_arg(params, double));
 }
 
 /**
  * string_var_param - print string parameters
- * @string_params: string parameters
+ * @params: string parameters
  */
-void string_var_param(va_list string_params)
+void string_var_param(va_list params)
 {
-	char *new_str = va_arg(string_params, char *);
+	char *new_str = va_arg(params, char *);
 
 	if (new_str == NULL)
 	{
