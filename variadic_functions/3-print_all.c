@@ -17,24 +17,24 @@ void print_all(const char *const format, ...)
 		{'i', int_var_param},
 		{'f', float_var_param},
 		{'s', string_var_param},
-		{0, NULL}};
+		{'\0', NULL}};
 	va_list params;
 
 	va_start(params, format);
-	while (format[i] != '\0')
+	while (format[i] != '\0' || format != NULL)
 	{
 		j = 0;
 
-		while ((format_ind[j].var_type_ind != format[i]) && (format_ind[j].type_print != NULL))
+		while (format_ind[j].f != '\0')
 		{
 			j++;
-		}
 
-		if (format_ind[j].type_print != NULL)
-		{
-			printf("%s", separator);
-			format_ind[j].type_print(&params);
-			separator = ", ";
+			if (format_ind[j].var_type_ind == format[i])
+			{
+				printf("%s", separator);
+				format_ind[j].type_print(&params);
+				separator = ", ";
+			}
 		}
 
 		i++;
