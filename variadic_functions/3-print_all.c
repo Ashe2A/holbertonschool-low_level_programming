@@ -11,12 +11,13 @@ void print_all(const char *const format, ...)
 	int i = 0;
 	int j;
 	char *separator = "";
-	ind_t format_ind[] = {
-		{'i', int_var_param},
-		{'c', char_var_param},
-		{'s', string_var_param},
-		{'f', float_var_param},
-		{'\0', NULL}};
+	ind_t format_ind[] =
+		{
+			{'i', int_var_param},
+			{'c', char_var_param},
+			{'s', string_var_param},
+			{'f', float_var_param},
+			{'\0', NULL}};
 	va_list params;
 
 	va_start(params, format);
@@ -37,8 +38,9 @@ void print_all(const char *const format, ...)
 
 		i++;
 	}
-	va_end(params);
+
 	printf("\n");
+	va_end(params);
 }
 
 /**
@@ -78,8 +80,7 @@ void string_var_param(va_list params)
 
 	if (new_str == NULL)
 	{
-		printf("%s", "(nil)");
-		return;
+		new_str = "(nil)";
 	}
 
 	printf("%s", new_str);
