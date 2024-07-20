@@ -28,7 +28,7 @@ void print_all(const char *const format, ...)
 		{
 			if (format_ind[j].var_type_ind == format[i])
 			{
-				printf(separator);
+				printf("%s", separator);
 				(format_ind[j].type_print)(params);
 				separator = ", ";
 			}
