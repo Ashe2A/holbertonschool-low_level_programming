@@ -13,8 +13,6 @@ void print_all(const char *const format, ...);
 
 #include <stdarg.h>
 
-void _putchar(char c);
-
 typedef struct indicator
 {
 	char var_type_ind;

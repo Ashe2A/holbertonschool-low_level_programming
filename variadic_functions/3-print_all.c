@@ -47,7 +47,7 @@ void print_all(const char *const format, ...)
  */
 void char_var_param(va_list params)
 {
-	_putchar(va_arg(params, int));
+	printf("%c", va_arg(params, int));
 }
 
 /**
