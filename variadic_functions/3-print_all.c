@@ -74,6 +74,7 @@ void print_all(const char *const format, ...)
 				printf("%s", separator);
 				(format_ind[j].type_print)(params);
 				separator = ", ";
+				j = 3;
 			}
 			j++;
 		}
