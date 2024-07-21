@@ -63,7 +63,8 @@ void print_all(const char *const format, ...)
 	va_list params;
 
 	va_start(params, format);
-	while ((format[i] != '\0') && (format != NULL))
+
+	while ((format[i] != '\0') || (format != NULL))
 	{
 		j = 0;
 
@@ -74,7 +75,6 @@ void print_all(const char *const format, ...)
 				printf("%s", separator);
 				(format_ind[j].type_print)(params);
 				separator = ", ";
-				j = 3;
 			}
 			j++;
 		}
