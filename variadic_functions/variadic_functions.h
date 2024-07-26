@@ -15,7 +15,7 @@ void print_all(const char *const format, ...);
 
 typedef struct indicator
 {
-	char var_type_ind;
+	char *var_type_ind;
 	void (*type_print)(va_list);
 } ind_t;
 
