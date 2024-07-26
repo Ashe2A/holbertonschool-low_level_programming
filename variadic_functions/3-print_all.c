@@ -41,6 +41,7 @@ void string_var_param(va_list params)
 	if (new_str == NULL)
 	{
 		new_str = "(nil)";
+		return;
 	}
 
 	printf("%s", new_str);
@@ -64,25 +65,21 @@ void print_all(const char *const format, ...)
 	va_list params;
 
 	va_start(params, format);
-
 	while ((format[i] != '\0') && (format != NULL))
 	{
 		j = 0;
-
 		while (format_ind[j].var_type_ind != NULL)
 		{
 			if ((format_ind[j].var_type_ind)[0] == format[i])
 			{
 				printf("%s", separator);
-				(format_ind[j].type_print)(params);
 				separator = ", ";
+				(format_ind[j].type_print)(params);
 			}
 			j++;
 		}
-
 		i++;
 	}
-
 	printf("\n");
 	va_end(params);
 }
