@@ -40,7 +40,6 @@ void string_var_param(va_list params)
 	if (new_str == NULL)
 	{
 		new_str = "(nil)";
-		return;
 	}
 
 	printf("%s", new_str);
@@ -60,12 +59,12 @@ void print_all(const char *const format, ...)
 		{'c', char_var_param},
 		{'s', string_var_param},
 		{'f', float_var_param},
-		{'\0', NULL}};
+		{NULL, NULL}};
 	va_list params;
 
 	va_start(params, format);
 
-	while ((format[i] != '\0') && (format != NULL))
+	while ((format[i] != NULL) && (format != NULL))
 	{
 		j = 0;
 
