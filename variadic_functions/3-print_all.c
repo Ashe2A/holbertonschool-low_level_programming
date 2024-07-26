@@ -40,6 +40,7 @@ void string_var_param(va_list params)
 	if (new_str == NULL)
 	{
 		new_str = "(nil)";
+		return;
 	}
 
 	printf("%s", new_str);
