@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * char_var_param - print char parameters
