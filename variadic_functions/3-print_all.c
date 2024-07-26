@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * char_var_param - print char parameters
@@ -59,7 +60,7 @@ void print_all(const char *const format, ...)
 		{'c', char_var_param},
 		{'s', string_var_param},
 		{'f', float_var_param},
-		{'\0', NULL}};
+		{NULL, NULL}};
 	va_list params;
 
 	va_start(params, format);
@@ -68,7 +69,7 @@ void print_all(const char *const format, ...)
 	{
 		j = 0;
 
-		while (format_ind[j].var_type_ind != '\0')
+		while (format_ind[j].var_type_ind != NULL)
 		{
 			if (format_ind[j].var_type_ind == format[i])
 			{
