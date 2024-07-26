@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * char_var_param - print char parameters
@@ -41,7 +41,6 @@ void string_var_param(va_list params)
 	if (new_str == NULL)
 	{
 		new_str = "(nil)";
-		return;
 	}
 
 	printf("%s", new_str);
