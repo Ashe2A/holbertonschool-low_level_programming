@@ -10,11 +10,11 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	if ((*head != NULL) && (str != NULL))
+	if ((head != NULL) && (str != NULL))
 	{
-        *(head->next->str) = strdup(str);
-        *(head->next->len) = *(head->len);
-		return (*(head->next));
+		(head[0])->next->str = strdup(str);
+		(head[0])->next->len = (head[0])->len;
+		return ((head[0])->next);
 	}
 	return (NULL);
 }
