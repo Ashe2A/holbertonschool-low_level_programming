@@ -8,7 +8,7 @@
  *
  * Return: size of the list
  */
-size_t print_list(const list_t *h);
+size_t print_list(const list_t *h)
 {
     list_t *new;
     size_t size = 0;
