@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * list_len - add node in list
