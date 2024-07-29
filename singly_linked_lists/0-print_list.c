@@ -9,8 +9,8 @@
  */
 size_t print_list(const list_t *h)
 {
-    if (h == NULL)
-    {
+	if (h == NULL)
+	{
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
 		else
@@ -18,6 +18,6 @@ size_t print_list(const list_t *h)
 		if (h->next == NULL)
 			return (1);
 		return (print_list(h->next) + 1);
-    }
-    return (0);
+	}
+	return (0);
 }
