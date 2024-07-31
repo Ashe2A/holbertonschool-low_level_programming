@@ -20,7 +20,6 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		{
 			if (no_dupes->n == n)
 			{
-				free(new_tail);
 				return (NULL);
 			}
 			old_tail = no_dupes;
