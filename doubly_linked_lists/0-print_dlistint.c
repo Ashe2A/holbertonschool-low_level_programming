@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 
-/*
+/**
  * print_dlistint - print full doubly linked list
  * @h: head of the list
  *
