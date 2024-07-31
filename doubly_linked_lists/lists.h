@@ -1,6 +1,8 @@
 #ifndef WEEK9_PROJECT1
 #define WEEK9_PROJECT1
 
+#include <stddef.h>
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
