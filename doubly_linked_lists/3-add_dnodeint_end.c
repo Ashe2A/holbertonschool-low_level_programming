@@ -8,7 +8,7 @@
  *
  * Return: newly added node address
  */
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_tail = malloc(sizeof(dlistint_t));
 	dlistint_t *no_dupes = head[0];
