@@ -18,8 +18,10 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		while (no_dupes != NULL)
 		{
 			if (no_dupes->n == n)
+			{
 				free(new_head);
 				return (NULL);
+			}
 			no_dupes = no_dupes->next;
 		}
 		new_head->n = n;
