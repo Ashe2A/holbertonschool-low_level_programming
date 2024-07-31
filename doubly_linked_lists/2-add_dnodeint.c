@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -16,7 +15,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if ((head != NULL) && (new_head != NULL))
 	{
 		new_head->n = n;
-		new_head->prev = NULL;
 		new_head->next = head[0];
 		if (new_head == NULL)
 		{
@@ -24,6 +22,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 			return (new_head);
 		}
 		head[0] = new_head;
+		new_head->prev = NULL;
 		return (new_head);
 	}
 	free(new_head);
