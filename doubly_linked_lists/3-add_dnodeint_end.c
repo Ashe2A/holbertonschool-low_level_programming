@@ -12,7 +12,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_tail = malloc(sizeof(dlistint_t));
 	dlistint_t *no_dupes = head[0];
-	dlistint_t *old_tail = head[0];
+	dlistint_t *old_tail;
 
 	if (new_tail != NULL)
 	{
@@ -31,7 +31,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 				free(new_tail);
 				return (NULL);
 			}
-			old_tail = no_dupes;
+			old_tail[0] = no_dupes[0];
 			no_dupes = no_dupes->next;
 		}
 		new_tail->prev = old_tail;
