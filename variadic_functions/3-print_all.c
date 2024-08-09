@@ -64,13 +64,12 @@ void print_all(const char *const format, ...)
 	va_list params;
 
 	va_start(params, format);
-	while ((format[i] != '\0') && (format != NULL))
+	while ((format[i] != '\0') && (format != NULL) && (params != NULL))
 	{
 		j = 0;
 		while (format_ind[j].var_type_ind != NULL)
 		{
-			if (((format_ind[j].var_type_ind)[0] == format[i])
-			&& (format[i + 1] == '\0'))
+			if ((format_ind[j].var_type_ind)[0] == format[i])
 			{
 				printf("%s", separator);
 				separator = ", ";
