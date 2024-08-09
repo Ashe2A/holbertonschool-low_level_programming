@@ -9,7 +9,7 @@
  */
 void char_var_param(va_list params)
 {
-	printf("%c", va_arg(params, int));
+	printf("%c", (char)va_arg(params, int));
 }
 
 /**
@@ -27,7 +27,7 @@ void int_var_param(va_list params)
  */
 void float_var_param(va_list params)
 {
-	printf("%f", va_arg(params, double));
+	printf("%f", (float)va_arg(params, double));
 }
 
 /**
@@ -64,7 +64,7 @@ void print_all(const char *const format, ...)
 	va_list params;
 
 	va_start(params, format);
-	while ((format[i] != '\0') && (format != NULL) && (params != NULL))
+	while ((format[i] != '\0') && (format != NULL))
 	{
 		j = 0;
 		while (((format_ind[j]).var_type_ind) != '\0')
@@ -74,6 +74,7 @@ void print_all(const char *const format, ...)
 				printf("%s", separator);
 				separator = ", ";
 				((format_ind[j]).type_print)(params);
+				break;
 			}
 			j++;
 		}
