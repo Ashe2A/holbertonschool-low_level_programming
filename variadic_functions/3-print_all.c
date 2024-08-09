@@ -56,24 +56,24 @@ void print_all(const char *const format, ...)
 	int j;
 	char *separator = "";
 	ind_t format_ind[] = {
-		{"i", int_var_param},
-		{"c", char_var_param},
-		{"s", string_var_param},
-		{"f", float_var_param},
-		{"\0", NULL}};
+		{'i', int_var_param},
+		{'c', char_var_param},
+		{'s', string_var_param},
+		{'f', float_var_param},
+		{'\0', NULL}};
 	va_list params;
 
 	va_start(params, format);
 	while ((format[i] != '\0') && (format != NULL) && (params != NULL))
 	{
 		j = 0;
-		while (format_ind[j].var_type_ind != NULL)
+		while (((format_ind[j]).var_type_ind) != '\0')
 		{
-			if ((format_ind[j].var_type_ind)[0] == format[i])
+			if (((format_ind[j]).var_type_ind) == format[i])
 			{
 				printf("%s", separator);
 				separator = ", ";
-				(format_ind[j].type_print)(params);
+				((format_ind[j]).type_print)(params);
 			}
 			j++;
 		}
