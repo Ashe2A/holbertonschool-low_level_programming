@@ -63,9 +63,9 @@ void print_all(const char *const format, ...)
 		{'\0', NULL}};
 	va_list params;
 
-	while ((format[i] != '\0') && (format != NULL))
+	va_start(params, format);
+	while ((format != NULL) && (format[i] != '\0'))
 	{
-		va_start(params, format);
 		j = 0;
 		while (((format_ind[j]).var_type_ind) != '\0')
 		{
@@ -79,7 +79,7 @@ void print_all(const char *const format, ...)
 			j++;
 		}
 		i++;
-		va_end(params);
 	}
+	va_end(params);
 	printf("\n");
 }
