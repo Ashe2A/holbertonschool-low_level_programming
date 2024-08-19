@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include "5-get_dnodeint.c"
 
 /**
  * insert_dnodeint_at_index - add a node at index
