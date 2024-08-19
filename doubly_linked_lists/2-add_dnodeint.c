@@ -3,7 +3,7 @@
 
 /**
  * add_dnodeint - add new head node in list
- * @head: address of the list head
+ * @head: address of the list
  * @n: head first int
  *
  * Return: newly added node address
