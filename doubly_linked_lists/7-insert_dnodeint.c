@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 #include "5-get_dnodeint.c"
+#include "1-dlistint_len.c"
 
 /**
  * insert_dnodeint_at_index - add a node at index
@@ -16,11 +17,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if ((new_node != NULL) && (h != NULL))
 	{
+		if (idx > dlistint_len(h[0]) - 1)
+			idx = dlistint_len(h[0]) - 1;
 		new_node->n = n;
 		new_node->prev = get_dnodeint_at_index(h[0], idx - 1);
 		new_node->next = get_dnodeint_at_index(h[0], idx);
 		if (new_node->prev != NULL)
 			new_node->prev->next = new_node;
+		else
+			h[0] = new_node;
 		if (new_node->next != NULL)
 			new_node->next->prev = new_node;
 		return (new_node);
