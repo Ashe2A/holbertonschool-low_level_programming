@@ -21,7 +21,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			(h[0])->prev = NULL;
 			return (1);
 		}
-		if (index == dlistint_len(h[0]))
+		if (index == dlistint_len(head[0]))
 		{
 			free(get_dnodeint_at_index(head[0], index));
 			(get_dnodeint_at_index(head[0], index - 1))->next = NULL;
