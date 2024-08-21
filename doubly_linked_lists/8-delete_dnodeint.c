@@ -12,16 +12,21 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	if ((head != NULL) && (index < dlistint_len(head[0])))
+	if ((head != NULL) && (index < dlistint_len(head[0]) - 1))
 	{
 		if (index == 0)
 		{
-			head[0] = get_dnodeint_at_index(head[0], 1);
-			free((head[0])->prev);
-			(head[0])->prev = NULL;
+			if (get_dnodeint_at_index(head[0], 1) == NULL)
+				free(head);
+			else
+			{
+				head[0] = get_dnodeint_at_index(head[0], 1);
+				free(head[0])->prev);
+				(head[0])->prev = NULL;
+			}
 			return (1);
 		}
-		if (index == dlistint_len(head[0]))
+		if (index == dlistint_len(head[0]) - 1)
 		{
 			free(get_dnodeint_at_index(head[0], index));
 			(get_dnodeint_at_index(head[0], index - 1))->next = NULL;
