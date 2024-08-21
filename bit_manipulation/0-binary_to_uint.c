@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 	int binlen = strlen(b);
 	int i;
 	int dec = 0;
-	int bit = 0;
+	int bit = 1;
 
 	if (b != NULL)
 	{
