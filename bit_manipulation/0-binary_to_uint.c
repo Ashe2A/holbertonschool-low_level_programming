@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 
 /**
  * _strlen - string length
@@ -29,13 +29,16 @@ unsigned int binary_to_uint(const char *b)
 	int dec = 0;
 	int bit = 1;
 
-	if (b == NULL)
-		return (0);
-	for (i = binlen - 1; i >= 0; i--)
-		if ((b[i] != '0') && (b[i] != '1'))
-			return (0);
-		dec += (b[i] - '0') * bit;
-		bit *= 2;
+	if (b != NULL)
+	{
+		for (i = binlen - 1; i >= 0; i--)
+		{
+			if ((b[i] != '0') && (b[i] != '1'))
+				return (0);
+			dec += (b[i] - '0') * bit;
+			bit *= 2;
+		}
+		return (dec);
 	}
-	return (dec);
+	return (0);
 }
