@@ -12,30 +12,20 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	if ((head != NULL) && (index < dlistint_len(head[0]) - 1))
+	dlistint_t *unworthy_node = get_dnodeint_at_index(head[0], index);
+
+	if ((head != NULL) && (unworthy_node != NULL)
+	&& (index < dlistint_len(head[0]) - 1))
 	{
-		if (index == 0)
-		{
-			if (get_dnodeint_at_index(head[0], 1) == NULL)
-				free(head);
-			else
-			{
-				head[0] = get_dnodeint_at_index(head[0], 1);
-				free((head[0])->prev);
-				(head[0])->prev = NULL;
-			}
-			return (1);
-		}
-		if (index == dlistint_len(head[0]) - 1)
-		{
-			free(get_dnodeint_at_index(head[0], index));
-			(get_dnodeint_at_index(head[0], index - 1))->next = NULL;
-			return (1);
-		}
-		(get_dnodeint_at_index(head[0], index - 1))->next = get_dnodeint_at_index(head[0], index + 1);
-		free((get_dnodeint_at_index(head[0], index - 1))->next->prev);
-		(get_dnodeint_at_index(head[0], index - 1))->next->prev = get_dnodeint_at_index(head[0], index - 1);
+		if (unworthy_node->prev != NULL)
+			unworthy_node->prev->next = unworthy_node->next;
+		else
+			head[0] = unworthy_node->next;
+		if (unworthy_node->next != NULL)
+			unworthy_node->next->prev = unworthy_node->prev;
+		free(unworthy_node);
 		return (1);
 	}
+	free(unworthy_node);
 	return (-1);
 }
