@@ -14,8 +14,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *unworthy_node = get_dnodeint_at_index(head[0], index);
 
-	if ((head != NULL) && (unworthy_node != NULL)
-	&& (index < dlistint_len(head[0]) - 1))
+	if ((head != NULL) && (head[0] != NULL) && (unworthy_node != NULL)
+	&& (index < dlistint_len(head[0])))
 	{
 		if (unworthy_node->prev != NULL)
 			unworthy_node->prev->next = unworthy_node->next;
@@ -26,6 +26,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(unworthy_node);
 		return (1);
 	}
-	free(unworthy_node);
 	return (-1);
 }
