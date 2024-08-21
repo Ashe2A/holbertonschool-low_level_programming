@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include "../pointers_arrays_strings/2-strlen.c"
 
 /**
  * binary_to_uint - convert bin to dec
@@ -9,7 +10,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int binlen = strlen(b);
+	int binlen = _strlen(b);
 	int i;
 	int dec = 0;
 	int bit = 1;
