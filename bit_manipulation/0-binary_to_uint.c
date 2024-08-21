@@ -34,7 +34,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			if ((b[i] != '0') && (b[i] != '1'))
 				return (0);
-			dec += b[i] * bit;
+			dec += (b[i] - '0') * bit;
 			bit *= 2;
 		}
 		return (dec);
