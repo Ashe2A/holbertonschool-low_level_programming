@@ -36,7 +36,6 @@ unsigned int binary_to_uint(const char *b)
 				return (0);
 			dec += b[i] * bit;
 			bit *= 2;
-			dec *= 10;
 		}
 		return (dec);
 	}
