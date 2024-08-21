@@ -24,13 +24,14 @@ int _strlen(const char *s)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int binlen = _strlen(b);
+	int binlen;
 	int i;
 	int dec = 0;
 	int bit = 1;
 
 	if (b != NULL)
 	{
+		binlen = _strlen(b);
 		for (i = binlen - 1; i >= 0; i--)
 		{
 			if ((b[i] != '0') && (b[i] != '1'))
