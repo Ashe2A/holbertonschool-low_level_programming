@@ -3,4 +3,6 @@
 
 unsigned int binary_to_uint(const char *b);
 
+int _strlen(const char *);
+
 #endif
