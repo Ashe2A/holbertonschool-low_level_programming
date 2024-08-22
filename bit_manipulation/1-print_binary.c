@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int dec = n;
 	unsigned long int bit = 1;
-	
+
 	if (n == ULONG_MAX)
 	{
 		printf("1111111111111111111111111111111111111111111111111111111111111111");
