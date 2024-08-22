@@ -13,15 +13,15 @@ void print_binary(unsigned long int n)
 	while (bit * 2 < dec)
 		bit *= 2;
 
-	while ((dec > 0) && (bit > 0))
+	while ((dec > 0) || (bit > 0))
 	{
 		if (dec >= bit)
 		{
 			dec -= bit;
-			putchar('1');
+			printf("1");
 		}
 		else
-			putchar('0');
+			printf("0");
 		bit = bit >> 1;
 	}
 }
