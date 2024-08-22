@@ -10,6 +10,9 @@ void print_binary(unsigned long int n)
 	unsigned long int dec = n;
 	unsigned long int bit = 1;
 	
+	if (n == 18446744073709551615)
+		printf("1111111111111111111111111111111111111111111111111111111111111111");
+	
 	while (bit * 2 <= dec)
 		bit *= 2;
 
