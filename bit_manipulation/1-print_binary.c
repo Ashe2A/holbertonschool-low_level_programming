@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	if (n == ULONG_MAX)
 	{
 		printf("1111111111111111111111111111111111111111111111111111111111111111");
-		break;
+		return;
 	}
 
 	while (bit * 2 <= dec)
