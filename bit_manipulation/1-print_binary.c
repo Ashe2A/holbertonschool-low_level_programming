@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * print_binary - convert dec to bin
@@ -10,8 +11,11 @@ void print_binary(unsigned long int n)
 	unsigned long int dec = n;
 	unsigned long int bit = 1;
 	
-	if (n == 4294967295)
+	if (n == ULONG_MAX)
+	{
 		printf("1111111111111111111111111111111111111111111111111111111111111111");
+		break;
+	}
 
 	while (bit * 2 <= dec)
 		bit *= 2;
