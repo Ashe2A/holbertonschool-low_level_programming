@@ -1,17 +1,15 @@
 #include "main.h"
 
 /**
- * print_binary - convert dec to bin
- * @n: decimal number$
+ * get_bit - get bit at index of a number
+ * @n: decimal number
  * @index: index starting from the right
+ *
+ * Return: bit if number at index
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int remains = n >> index;
-
-	if ((n == 0) && (index == 0))
-		return (0);
-	if (remains == 0)
+	if (index > 63) /* (number of bits of ULONG_MAX) - 1 */
 		return (-1);
-	return (remains & 1);
+	return ((n >> index) & 1);
 }
