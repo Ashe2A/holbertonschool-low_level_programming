@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 	unsigned long int dec = n;
 	unsigned long int bit = 1;
 	
-	while (bin * 2 < dec)
+	while (bit * 2 < dec)
 		bit *= 2;
 
 	while ((dec > 0) && (bit > 0))
